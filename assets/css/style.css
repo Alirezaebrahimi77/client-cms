@@ -751,8 +751,9 @@ tbody tr td:nth-child(2) a:hover{
 
 }
 .sellerContent select{
-    margin: 0;
+    margin:0 0 10px 0;
     width: 90%;
+
 }
 
 .filterContainer{
@@ -798,4 +799,28 @@ tbody tr td:nth-child(2) a:hover{
 #formBulk{
     display: flex;
     align-items: center;
+}
+
+.infoText{
+    margin-top: 20px;
+    font-size: .8rem;
+    color: var(--text-color);
+}
+
+.productTableDataRow td:nth-child(5){
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+.productTableHeadRow th:nth-child(5){
+    width: 60px;
+    text-align: center;
+}
+
+.productTableDataRow td:nth-child(1){
+    width: 20px;
+}
+.productTableHeadRow td:nth-child(1){
+    width: 20px;
 }

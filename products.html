@@ -46,19 +46,19 @@
         </li>
 
         <li>
-          <a href="products.html">
-            <i class='bx bx-news'></i>
-            <span class="links_name">Tuote</span>
-          </a>
-          <span class="tooltip">Tuote</span>
-        </li>
-        <li>
-          <a href="categories.html">
-              <i class='bx bx-category-alt' ></i>
-            <span class="links_name">Kategoria</span>
-          </a>
-          <span class="tooltip">Kategoria</span>
-        </li>
+            <a href="products.html">
+              <i class='bx bx-news'></i>
+              <span class="links_name">Tuote</span>
+            </a>
+            <span class="tooltip">Tuote</span>
+          </li>
+          <li>
+            <a href="categories.html">
+                <i class='bx bx-category-alt' ></i>
+              <span class="links_name">Kategoria</span>
+            </a>
+            <span class="tooltip">Kategoria</span>
+          </li>
       </ul>
       <div class="profile_content">
         <div class="profile">
@@ -77,7 +77,7 @@
     <main class="home_content">
       <div class="mainHeader">
         <div class="mainHeaderLeft">
-          <p class="main_title">Sellers</p>
+          <p class="main_title">Products</p>
           <p class="main-subTitle">Good morning, Alireza</p>
         </div>
         <div class="mainHeaderRight">
@@ -95,21 +95,33 @@
         <div class="dataContent sellerDataContent" style="display: flex">
           <div class="sellersLeft" style="flex: 1; flex-direction: column">
             <div class="sellerHeaderTitle">
-              <p class="sellerTitle">Lisää tunnukset</p>
+              <p class="sellerTitle">Lisää tuote</p>
             </div>
             <div class="sellerContent">
-              <input type="email" placeholder="Sähköposti" id="email"/>
-              <div class="passwordGenerator">
+              <!-- <input type="email" placeholder="Sähköposti" id="email"/> -->
+              <input type="text" placeholder="Lehden/Tuotteen nimi">
+              <!-- <div class="passwordGenerator">
                 <input type="text" placeholder="Salasana" id="salasana"/>
                 <i class="bx bx-refresh" id="generatePassword"></i>
                 <p id="popup-pass-info">Keksi salasana</p>
-              </div>
-              <select name="sellerRole" id="sellerRole">
-                  <option value="valitse" selected disabled>Valitse Rooli</option>
-                  <option value="yllapito">Ylläpito</option>
-                  <option value="myyja">Myyjä</option>
+              </div> -->
+              <select name="productNumber" id="productNumber">
+                  <option value="0" selected disabled>Valitse lehden numero</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
               </select>
-              <p class="infoText">- Kopioi salasana ennen kuin lisäät tunnukset.</p>
+              <select name="productCategory" id="productCategory">
+                  <option value="valitse" selected disabled>Valitse Kategoria</option>
+                  <option value="ammattirakentaja">Ammattirakentaja</option>
+                  <option value="myyja">Ammattikuljettaja</option>
+                  <option value="myyja">Ammattikeittiö</option>
+                  <option value="myyja">Sosiaali Terveysala Tänään</option>
+                  <option value="myyja">Ravintola Kahvila Fastfood</option>
+              </select>
+              <select name="productYear" id="productYear">
+              </select>
             </div>
             <div class="sellerBottom">
               <button class="btn">Lisää</button>
@@ -117,27 +129,33 @@
           </div>
 
           <div class="sellersRight" style="flex: 1">
+            <div class="sellerHeaderTitle">
+                <p class="sellerTitle">Tuotteet</p>
+              </div>
             <table style="height: 100%">
               <thead>
-                <tr class="sellerTableHeadRow">
+                <tr class="productTableHeadRow">
                   <th>#</th>
-                  <th>Sähköposti</th>
-                  <th>Rooli</th>
+                  <th>Lehden nimi</th>
+                  <th>Numero</th>
+                  <th>Vuosi</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="sellerTableDataRow">
+                <tr class="productTableDataRow">
                   <td>1</td>
-                  <td>Alireza@jdmmediagroup.com</td>
-                  <td>Ylläpito</td>
+                  <td>Ammattirakentaja</td>
+                  <td>2</td>
+                  <td>2021</td>
                   <td><i class="bx bxs-trash-alt"></i></td>
                 </tr>
 
-                <tr class="sellerTableDataRow">
+                <tr class="productTableDataRow">
                   <td>2</td>
-                  <td>pirjo@jdmmediagroup.com</td>
-                  <td>Myyjä</td>
+                  <td>recafa</td>
+                  <td>4</td>
+                  <td>2020</td>
                   <td><i class="bx bxs-trash-alt"></i></td>
                 </tr>
               </tbody>
@@ -147,7 +165,7 @@
       </div>
     </main>
 
-    <script src="assets/js/sellers.js"></script>
+    <script src="assets/js/products.js"></script>
     <script src="assets/js/sidebar.js"></script>
     <script src="assets/js/welcomeMessage.js"></script>
   </body>

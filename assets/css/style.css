@@ -310,7 +310,6 @@ body{
 
 
 .userDetails{
-    width: 110px;
     border-radius: 10px;
     background-color: #fff;
     display: flex;
@@ -408,16 +407,16 @@ body{
     font-size: 1.2rem;
 }
 .btn{
-    padding: 5px 10px;
-    border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.7);
     background-color: var(--primary-blue);
     color: #fff;
-    border: none;
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: .8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 .filterBtn{
     margin-left: 30px;
@@ -465,15 +464,20 @@ body{
 .searchInput{
     border-radius: 8px;
     border: 1px solid lightgray;
-    padding: 5px;
     font-size: .9rem;
     display: flex;
     align-items: center;
     color: var(--light-gray);
-    width: 150px;
+    width: 180px;
+    padding-left: 5px;
+    overflow: hidden;
 }
 .searchInput i{
-    margin-right: 5px;
+    background-color: var(--primary-blue);
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
 }
 
 input{
@@ -502,6 +506,13 @@ table{
     overflow: scroll;
     height: 300px;
     margin-top: 20px;
+}
+#dashboardTableBody tr td:nth-child(2) a{
+    color: var(--text-color);
+    transition: all 100ms ease;
+}
+#dashboardTableBody tr td:nth-child(2) a:hover{
+    color: var(--primary-blue);
 }
 
 thead{
@@ -787,7 +798,6 @@ tbody tr td:nth-child(2) a:hover{
     color: #fff;
     font-size: .8rem;
     cursor: pointer;
-    margin-top: -25px;
 
 }
 .addBulkEmail p span{
@@ -798,7 +808,7 @@ tbody tr td:nth-child(2) a:hover{
 }
 #formBulk{
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .infoText{
@@ -811,7 +821,10 @@ tbody tr td:nth-child(2) a:hover{
     width: 60px;
     text-align: center;
     cursor: pointer;
-    transition: all 350ms ease;
+    font-size: 1rem;
+}
+.productTableDataRow td:nth-child(5):hover{
+    color: red;
 }
 .productTableHeadRow th:nth-child(5){
     width: 60px;
@@ -823,4 +836,287 @@ tbody tr td:nth-child(2) a:hover{
 }
 .productTableHeadRow td:nth-child(1){
     width: 20px;
+}
+
+button:disabled{
+    background-color: lightgray;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.loaderContainer{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: none;
+}
+.loader{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 80px;
+    height: 80%;
+    padding-left: 0;
+    position: relative;
+    z-index: infinite;
+}
+
+.loader:after{
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #277FFE;
+    border-color: #277FFE transparent;
+    animation: loader 1.2s linear infinite;
+}
+@keyframes loader {
+    0%{
+        transform: rotate(0deg)
+
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+.loaderContainer.show{
+    display: block;
+}
+/* login page css */
+.loginContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    
+    
+}
+.login{
+    width: 400px;
+    /* height: 400px; */
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.16);
+    border-radius: 5px;
+    padding: 30px;
+
+}
+
+.loginHeader{
+    width: 100%;
+    text-align: center;
+}
+.loginHeader h1{
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+.loginHeader p{
+    font-size: .8rem;
+    color: var(--light-gray);
+    margin-top: 10px;
+}
+.loginContent{
+    width: 100%;
+    text-align: center;
+    /* padding: 10px; */
+    margin-top: 30px;
+    flex: 1;
+}
+.inputForm{
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    align-items: center;
+
+}
+.inputForm i{
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+}
+.inputForm input{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+.addBtn{
+    background-color: transparent;
+    border: 1px solid lightgray;
+    color: var(--text-color);
+    box-shadow: none;
+    transition: all 350ms ease;
+}
+.addBtn:hover{
+    box-shadow: 1px 6px 8px rgba(0,0,0,0.16);
+}
+
+.btn-login{
+    width: 100%;
+    background-color: #277FFE;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: 250ms background-color;
+    justify-content: center;
+}
+.btn-login:hover{
+    background-color: #1f65cb;
+}
+
+.btn:disabled{
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+.btn-login:disabled:hover{
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+.loginMessage{
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    display: none;
+}
+
+.success{
+    background-color: #bef264;
+    color: #4d7c0f;
+}
+
+.error{
+    background-color: #fca5a5;
+    color: #b91c1c;
+}
+
+/* End of login page css */
+
+
+.dataHeaderRight{
+    display: flex;
+
+}
+
+.majorBox{
+    flex: 1;
+    position: relative;
+}
+
+
+.majorBox input{
+    margin: 0;
+}
+.ProvinceBox input{
+    margin: 0;
+}
+
+
+.ProvinceBox{
+    flex: 1;
+    position: relative;
+}
+
+
+.majorSelected{
+    width: 100%;
+    background-color: var(--background);
+    color: var(--text-color);
+    display: block;
+    border-radius: 5px;
+    /* border: 1px solid gray; */
+    margin-bottom: 20px;
+
+}
+.majorSelected::-webkit-scrollbar{
+    display: none;
+}
+.singleMajor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 0 0;
+    border-bottom: 1px solid white;
+    font-size: .8rem;
+    padding: 5px 10px;
+}
+.singleProvince{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 0 0;
+    border-bottom: 1px solid white;
+    font-size: .8rem;
+    padding: 5px 10px;
+}
+
+.singleMajor span:nth-child(2){
+    font-size: 20px;
+    cursor: pointer;
+}
+.singleProvince span:nth-child(2){
+    font-size: 20px;
+    cursor: pointer;
+}
+.singleMajor span:nth-child(2):hover{
+    color: red;
+}
+.singleProvince span:nth-child(2):hover{
+    color: red;
+}
+
+.majorSelected.onSearch{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: var(--background);
+    padding: 5px;
+    color: var(--text-color);
+    max-height: 120px;
+    top: 25px;
+    overflow: scroll;
+    margin: 5px 0;
+}
+
+.majorSelected.onSearch .singleMajor{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.majorSelected.onSearch .singleProvince{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.majorSelected.onSearch .singleMajor:hover{
+    opacity: .8;
+    background-color: var(--light-gray);
+}
+.majorSelected.onSearch .singleProvince:hover{
+    opacity: .8;
+    background-color: var(--light-gray);
+}
+.moreDetails{
+    width: 100%;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+
 }
